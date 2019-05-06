@@ -45,7 +45,6 @@
     "react-google-login": "^5.0.2",
     "react-localization": "^1.0.11",
     "react-new-window": "0.0.12",
-    "@myNameSpace/myPackage": "latest",
     "react-router": "4.4.0-alpha.0",
     "react-router-dom": "^4.1.0",
     "react-scripts": "1.1.5",
