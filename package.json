@@ -1,28 +1,19 @@
 {
-  "engines": {
-    "node": "11.11.0",
-    "npm": "6.7.0"
-  },
   "name": "reactjs_newproject",
   "version": "1.0.0",
   "description": "some basic react",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --mode development --open",
-    "start": "node server.js",
-    "heroku-postbuild": "webpack -p"
+    "start": "npm run build",
+    "build": "webpack -d  && cp src/index.html dist/index.html && webpack-dev-server --content-base src/ --inline --hot --history-api-fallback",
+    "build:prod": "webpack -p  && cp src/index.html dist/index.html"
   },
   "keywords": [
-    "reactjs",
-    "node",
-    "heroku",
-    "express"
+    "reactjs"
   ],
   "author": "chandra",
   "license": "ISC",
   "dependencies": {
-    "ejs": "^2.5.6",
-    "express": "^4.15.2",
     "@babel/core": "^7.3.4",
     "@babel/plugin-proposal-class-properties": "^7.3.4",
     "@babel/plugin-syntax-dynamic-import": "^7.2.0",
@@ -57,8 +48,6 @@
     "style-loader": "^0.23.1"
   },
   "devDependencies": {
-    "request": "^2.81.0",
-    "tape": "^4.7.0",
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.5",
     "babel-preset-es2015": "^6.24.1",

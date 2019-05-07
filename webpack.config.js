@@ -2,24 +2,22 @@ var webpack = require("webpack");
 var path = require("path");
 var router = require('react-router');
 
+var DIST_DIR = path.resolve(__dirname, "dist");
+var SRC_DIR = path.resolve(__dirname, "src");
 
 var config = {
-    entry: [ "./src/index.js"],
+    entry: SRC_DIR + "/app/index.js",
     output: {
-        path: __dirname,
+        path: DIST_DIR + "/app",
         filename: "bundle.js",
-        publicPath: "/"
-    },
-    resolve: {
-        extensions: ['.js', '.jsx'] 
-    
+        publicPath: "/app/"
     },
     module: {
         rules: [
             {
                 test: /\.js?/,
+                include: SRC_DIR,
                 loader: "babel-loader",
-                exclude: /node_modules/,
                 options: {
                     presets: [  {
                               'plugins': ['@babel/plugin-proposal-class-properties']}]
