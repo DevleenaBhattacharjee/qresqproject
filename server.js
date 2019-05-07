@@ -9,9 +9,10 @@ process.env.PWD = process.cwd();
 app.use(express.static(__dirname));
 
 // send the user to index html page inspite of the url
-app.get('*', (req, res) => {
+app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 app.listen(port);
 console.log('server_started');
+
