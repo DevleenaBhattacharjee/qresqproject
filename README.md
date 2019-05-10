@@ -4,7 +4,7 @@ On the command line, run the following command
 
 1. `git clone https://github.com/DevleenaBhattacharjee/qresqproject.git`
 
-2. `npm install`
+2. `npm install https://github.com/DevleenaBhattacharjee/qresqproject.git`
 
 3. `npm start`
 
