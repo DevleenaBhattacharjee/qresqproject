@@ -1,0 +1,55 @@
+
+  .panel{
+    margin-top: 10px;  
+  }
+  .panel-right-side,
+  .panel-left-side  {
+    width: 750px;
+    height: 650px;
+    margin-top: 10px;
+    background-color: transparent;
+    border: 10px;
+    border-color: black;
+    position: absolute;
+    animation: mymove 5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+  @keyframes mymove {
+    from {bottom: -100px;}
+    to {bottom: 100px;}
+  }
+
+  .panel-right-side{
+    left: 0;
+  }
+  .panel-left-side {
+    right: 0;
+  }
+  
+  
+  .panel-center-side {
+    width: 650px;
+    height: 400px;
+    position: absolute;
+    top: 250px;
+    left: 400px;
+  }
+  .panel-text-display{
+    width: 100%;
+    height:100%;
+    position: absolute;
+    display: table-cell;
+    vertical-align: middle;
+    align-content: center;
+    background-color: transparent;
+  }
+  .panel-label-header{ 
+    font-size: 1.2em;
+    /* color: white; */
+  }
+  .panel-label-value{
+    font-size: .9em;
+    /* color: white; */
+  }
+  
